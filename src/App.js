@@ -1,14 +1,13 @@
 import React from "react";
 
 import "./App.css";
-import LoginButton from "./features/login/loginButton";
-import LogoutButton from "./features/login/logoutButton";
-
+import Header from "./features/header/header";
+import CreateAppointment from "./features/buttons/createAppointment";
 function App() {
   return (
     <div className="App">
-      <LoginButton />
-      <LogoutButton />
+      <Header />
+      <CreateAppointment />
     </div>
   );
 }
