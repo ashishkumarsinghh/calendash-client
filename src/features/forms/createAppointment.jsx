@@ -17,16 +17,21 @@ export default function CreateAppointment() {
       },
       body: JSON.stringify(data),
     });
+    document.querySelector("#description").value = "";
+    document.querySelector("#apptDate").value = "";
+    document.querySelector("#apptTime").value = "";
     console.log(response.json());
   };
 
   return (
     <div className="caForm">
-      <h2 className="text-2xl m-2 px-4">Create New Appointment</h2>
-      <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-1/2">
+      <h2 className="text-2xl ml-2 px-6  font-extrabold">
+        Create New Appointment
+      </h2>
+      <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <label
           htmlFor="description"
-          class="block text-gray-700 text-sm font-bold mb-2"
+          className="block text-gray-700 text-sm font-bold mb-2"
         >
           Description of Appointment
         </label>
@@ -38,7 +43,7 @@ export default function CreateAppointment() {
         <br />
         <label
           htmlFor="apptDate"
-          class="block text-gray-700 text-sm font-bold mb-2"
+          className="block text-gray-700 text-sm font-bold mb-2"
         >
           Date
         </label>
@@ -50,7 +55,7 @@ export default function CreateAppointment() {
         <br />
         <label
           htmlFor="apptTime"
-          class="block text-gray-700 text-sm font-bold mb-2"
+          className="block text-gray-700 text-sm font-bold mb-2"
         >
           Time
         </label>
@@ -62,7 +67,7 @@ export default function CreateAppointment() {
         <br />
         <button
           onClick={createAppointment}
-          className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="mt-2 w-1/2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         >
           Create
         </button>
