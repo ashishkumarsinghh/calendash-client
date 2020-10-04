@@ -17,7 +17,6 @@ ReactDOM.render(
         <App />
       </Provider>
     </Auth0Provider>
-    ,
   </React.StrictMode>,
   document.getElementById("root")
 );
