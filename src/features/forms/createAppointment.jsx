@@ -9,14 +9,17 @@ export default function CreateAppointment() {
     const time = document.querySelector("#apptTime").value;
     const userId = user.email;
     const data = { description, date, time, userId };
-    const response = await fetch("http://localhost:3000/appointment", {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    const response = await fetch(
+      "https://calendash-server.herokuapp.com/appointment",
+      {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
     document.querySelector("#description").value = "";
     document.querySelector("#apptDate").value = "";
     document.querySelector("#apptTime").value = "";

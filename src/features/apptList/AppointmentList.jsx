@@ -7,7 +7,7 @@ export default function AppointmentList() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(
-        "http://localhost:3000/appointment/" + user.email
+        "https://calendash-server.herokuapp.com/appointment/" + user.email
       );
       const apptsData = await data.json();
       setappts(apptsData);
@@ -20,7 +20,7 @@ export default function AppointmentList() {
     const deleteAppt = async () => {
       console.log(e.target.id);
       const data = await fetch(
-        "http://localhost:3000/appointment/" + e.target.id,
+        "https://calendash-server.herokuapp.com/appointment/" + e.target.id,
         { method: "DELETE" }
       );
       console.log(data);
