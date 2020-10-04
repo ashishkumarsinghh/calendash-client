@@ -36,7 +36,7 @@ export default function AppointmentList() {
             <span className="font-semibold text-sm text-bold px-4 bg-gray-800 text-white py-3">
               {appt.date}
             </span>
-            <span className=" font-semibold ml-2 text-sm text-bold px-4 bg-blue-700 text-white py-3">
+            <span className=" font-semibold ml-2 text-sm text-bold px-4 border-gray-800 py-3">
               {appt.time}
             </span>
             <span className=" ml-2 text-sm text-light px-4 bg-blue-700 text-white py-3">
